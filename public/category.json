@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Complete Web Development Bootcamp",
+    "slug": "complete-web-development-bootcamp"
+  },
+  {
+    "id": 2,
+    "name": "Advanced JavaScript Mastery",
+    "slug": "advanced-javascript-mastery"
+  },
+  {
+    "id": 3,
+    "name": "UI/UX Design Fundamentals",
+    "slug": "ui-ux-design-fundamentals"
+  },
+  {
+    "id": 4,
+    "name": "React.js Complete Guide",
+    "slug": "react-js-complete-guide"
+  },
+  {
+    "id": 5,
+    "name": "Python for Data Science",
+    "slug": "python-for-data-science"
+  },
+  {
+    "id": 6,
+    "name": "Digital Marketing Essentials",
+    "slug": "digital-marketing-essentials"
+  }
+]
