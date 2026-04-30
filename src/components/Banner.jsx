@@ -31,8 +31,8 @@ const Banner = () => {
           <Image
             src="/bimage.png"
             alt="Hero Illustration"
-            width={500}
-            height={500}
+            width={300}
+            height={300}
             className="w-[320px] md:w-[420px] lg:w-[500px] rounded-2xl"
             priority
           />

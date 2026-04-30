@@ -7,7 +7,7 @@
     "rating": 4.8,
     "level": "Beginner",
     "description": "Learn full-stack web development from scratch.",
-    "image": "https://i.postimg.cc/example-course1.png",
+    "image": "https://i.ibb.co.com/C34bdZt1/images.jpg",
     "category": "Development"
   },
   {
@@ -18,7 +18,7 @@
     "rating": 4.7,
     "level": "Intermediate",
     "description": "Deep dive into modern JavaScript concepts and ES6+ features.",
-    "image": "https://i.postimg.cc/example-course2.png",
+    "image": "https://i.ibb.co.com/HfxZknHS/images.png",
     "category": "Development"
   },
   {
@@ -29,7 +29,7 @@
     "rating": 4.6,
     "level": "Beginner",
     "description": "Learn the basics of user interface and user experience design.",
-    "image": "https://i.postimg.cc/example-course3.png",
+    "image": "https://i.ibb.co.com/jZVJRGph/images-1.jpg",
     "category": "Design"
   },
   {
@@ -40,7 +40,7 @@
     "rating": 4.9,
     "level": "Intermediate",
     "description": "Build powerful front-end applications using React.js.",
-    "image": "https://i.postimg.cc/example-course4.png",
+    "image": "https://i.ibb.co.com/nNDh0z66/Gemini-Generated-Image-dtaxvrdtaxvrdtax.png",
     "category": "Development"
   },
   {
@@ -51,7 +51,7 @@
     "rating": 4.8,
     "level": "Beginner",
     "description": "Learn Python and its libraries for data analysis and visualization.",
-    "image": "https://i.postimg.cc/example-course5.png",
+    "image": "https://i.ibb.co.com/pv2rfjzy/download.jpg",
     "category": "Data Science"
   },
   {
@@ -62,7 +62,7 @@
     "rating": 4.5,
     "level": "Beginner",
     "description": "Understand SEO, social media marketing, and online advertising.",
-    "image": "https://i.postimg.cc/example-course6.png",
+    "image": "https://i.ibb.co.com/mQ5Smw1/download-1.jpg",
     "category": "Marketing"
   }
 ]
