@@ -19,7 +19,7 @@ const BestCousesCard = ({ datas, course }) => {
                 className='w-full h-48 object-cover'
             />
 
-            <Chip className='absolute top-0.5 right-1'>{course.category}</Chip>
+            <Chip className='absolute top-3 right-3 bg-linear-to-r from-emerald-400 to-red-400'>{course.category}</Chip>
 
             </div>
          

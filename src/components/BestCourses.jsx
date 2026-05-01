@@ -18,7 +18,7 @@ const BestCourses = async () => {
 
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
                 {topCouses.map((course) => (
-                    <BestCousesCard key={datas.id} datas={datas} course={course}/>
+                    <BestCousesCard key={course.id} datas={datas} course={course}/>
                 ))}
             </div>
         </section>
