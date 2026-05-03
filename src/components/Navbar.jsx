@@ -11,7 +11,7 @@ import { Avatar, Button } from '@heroui/react';
 export default function Navbar() {
   const userInfo = authClient.useSession()
   const user = userInfo.data?.user
-  console.log(user)
+  
 
   const handleSingOut = async() =>{
     await authClient.signOut()
@@ -41,14 +41,14 @@ export default function Navbar() {
 
 
           <div className="hidden md:flex items-center gap-6">
-            <Link href="/" className="text-slate-400 hover:text-black">
+            <Link href={"/"} className="text-slate-400 hover:text-black">
               Home
             </Link>
-            <Link href="/courses" className="text-gray-400 hover:text-black">
+            <Link href={"/courses"} className="text-gray-400 hover:text-black">
               Courses
             </Link>
 
-            <Link href="/contact" className="text-gray-400 hover:text-black">
+            <Link href={"/profile"} className="text-gray-400 hover:text-black">
               My profile
             </Link>
 
@@ -60,11 +60,11 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-2">
             {!user && (
               <>
-                <Link href="/singup" className="btn btn-sm btn-ghost">
+                <Link href={"/singup"} className="btn btn-sm btn-ghost">
                   Sign Up
                 </Link>
 
-                <Link href="/singin" className="btn btn-sm btn-primary">
+                <Link href={"/singin"} className="btn btn-sm btn-primary">
                   Login
                 </Link>
               </>
@@ -99,15 +99,15 @@ export default function Navbar() {
         >
           <div className="flex flex-col gap-4">
 
-            <Link href="/" onClick={() => setMenuOpen(false)} className="text-gray-500 hover:text-black">
+            <Link href={"/"} onClick={() => setMenuOpen(false)} className="text-gray-500 hover:text-black">
               Home
             </Link>
 
-            <Link href="/courses" onClick={() => setMenuOpen(false)} className="text-gray-500 hover:text-black">
+            <Link href={"/courses"} onClick={() => setMenuOpen(false)} className="text-gray-500 hover:text-black">
               Courses
             </Link>
 
-            <Link href="/" onClick={() => setMenuOpen(false)} className="text-gray-500 hover:text-black">
+            <Link href={"/profile"} onClick={() => setMenuOpen(false)} className="text-gray-500 hover:text-black">
               My Profile
             </Link>
 
@@ -117,11 +117,11 @@ export default function Navbar() {
 
             {!user && (
               <>
-                <Link href="/singup" className="btn btn-sm btn-ghost">
+                <Link href={"/singup"} className="btn btn-sm btn-ghost">
                   Sign Up
                 </Link>
 
-                <Link href="/singin" className="btn btn-sm btn-primary">
+                <Link href={"/singin"} className="btn btn-sm btn-primary">
                   Login
                 </Link>
               </>
