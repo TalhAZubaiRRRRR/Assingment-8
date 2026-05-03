@@ -46,11 +46,11 @@ export default function Navbar() {
 
           
           <div className="hidden md:flex items-center gap-2">
-            <Link href="/login" className="btn btn-sm btn-ghost">
-              Login
+            <Link href="/singup" className="btn btn-sm btn-ghost">
+              Sing Up
             </Link>
-            <Link href="/register" className="btn btn-sm btn-primary">
-              Register
+            <Link href="/singin" className="btn btn-sm btn-primary">
+              Login
             </Link>
           </div>
 
@@ -86,12 +86,12 @@ export default function Navbar() {
 
             <div className="border-t border-base-300 pt-3"></div>
 
-            <Link href="/login" className="btn btn-sm btn-outline w-full text-gray-400 hover:text-rose-700">
-              Login
+            <Link href="/singup" className="btn btn-sm btn-outline w-full text-gray-400 hover:text-rose-700">
+              Sing Up
             </Link>
 
-            <Link href="/register" className="btn btn-sm btn-primary w-full text-gray-400 hover:text-rose-700">
-              Register
+            <Link href="/singin" className="btn btn-sm btn-primary w-full text-gray-400 hover:text-rose-700">
+              Login
             </Link>
 
           </div>
