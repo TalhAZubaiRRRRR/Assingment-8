@@ -15,6 +15,8 @@ import {
 } from "@heroui/react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { BsGoogle } from "react-icons/bs";
+import { FaGoogle } from "react-icons/fa";
 
 
 import { toast } from "react-toastify";
@@ -53,6 +55,12 @@ export default function SignINPage() {
         }
 
     };
+
+    const handleGoogleSingIn = async () =>{
+        await authClient.signIn.social({
+            provider: 'google'
+        })
+    }
 
     return (
         <div className="">
@@ -132,6 +140,8 @@ export default function SignINPage() {
                         </Button>
                     </div>
                 </Form>
+                <p className="text-center">or</p>
+                <Button className='mx-auto mb-4' onClick={handleGoogleSingIn}> <FaGoogle/> Sing In with Google</Button>
             </Card>
             <ToastContainer />
         </div>
