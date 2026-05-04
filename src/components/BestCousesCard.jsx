@@ -1,10 +1,15 @@
+'use client'
 import { Button, Chip } from '@heroui/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { FaStar } from 'react-icons/fa';
+import { toast } from 'react-toastify';
 
 const BestCousesCard = ({ datas, course }) => {
+    const handletoast = () => {
+    toast.success('All Courses Here')
+}
     return (
         <div
             key={course.id}
@@ -52,8 +57,8 @@ const BestCousesCard = ({ datas, course }) => {
                         <FaStar /> {course.rating}
                     </span>
 
-                    <Link href='/courses'>
-                        <Button  className=" hover:bg-blue-700 ">
+                    <Link  href='/courses'>
+                        <Button onClick={handletoast} className=" hover:bg-blue-700 ">
                         Details
                     </Button>
                     </Link>
