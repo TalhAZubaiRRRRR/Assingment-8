@@ -18,5 +18,5 @@ if(!session){
 }
  
 export const config = {
-  matcher: ['/profile','/courses'],
+  matcher: ['/profile', '/details/:path*'],
 };
