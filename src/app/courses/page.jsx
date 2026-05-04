@@ -90,7 +90,7 @@ const AllCards = async ({ searchParams }) => {
                                         <FaStar /> {course.rating}
                                     </div>
 
-                                    <Link href={`/courses/${course.id}`}>
+                                    <Link href={`/details/${course.id}`}>
                                         <Button className="px-5 py-2 bg-blue-600 text-white rounded-xl text-sm font-medium hover:bg-blue-700 transition">
                                             View Details
                                         </Button>
