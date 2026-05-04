@@ -16,7 +16,7 @@ const BestCourses = async () => {
                 Top 3 Best Courses
             </h2>
 
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto ">
                 {topCouses.map((course) => (
                     <BestCousesCard key={course.id} datas={datas} course={course}/>
                 ))}

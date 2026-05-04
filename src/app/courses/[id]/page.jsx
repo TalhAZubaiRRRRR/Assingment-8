@@ -4,6 +4,7 @@ import Link from 'next/link';
 import React from 'react';
 import { FaArrowLeft, FaExclamationCircle, FaStar } from 'react-icons/fa';
 
+
 const cardsDetails = async ({ params }) => {
     const { id } = await params;
     const res = await fetch('https://assingment-8-phi.vercel.app/data.json');
@@ -13,9 +14,11 @@ const cardsDetails = async ({ params }) => {
     const course = datas.find(c => c.id == id);
 
     
+
+    
     if (!course) {
         return (
-            <div className="min-h-[70vh] flex flex-col items-center justify-center px-4 text-center">
+            <div className="min-h-[70vh] flex flex-col items-center justify-center px-4 text-center ">
                 
                 <div className="bg-gray-100 p-6 rounded-full mb-6">
                     <FaExclamationCircle className="text-gray-400 text-6xl" />
@@ -77,7 +80,7 @@ const cardsDetails = async ({ params }) => {
                 </div>
 
                 
-                <div className="p-8 flex flex-col flex-1">
+                <div className="p-8 flex flex-col flex-1  bg-linear-to-r from-red-200 to-sky-300">
                     <h3 className="text-2xl font-bold mb-4">
                         {course.title}
                     </h3>
@@ -98,7 +101,7 @@ const cardsDetails = async ({ params }) => {
                             <FaStar /> {course.rating}
                         </div>
 
-                        <button className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">
+                        <button  className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">
                             Enroll Now
                         </button>
                     </div>

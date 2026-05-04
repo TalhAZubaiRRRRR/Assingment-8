@@ -15,26 +15,39 @@ import {
 import Image from "next/image";
 
 export default function SignUpPage() {
+    const router = useRouter()
+
     const onSubmit = async (e) => {
+
         e.preventDefault();
         const name = e.target.name.value
         const image = e.target.image.value
-        
+
         const email = e.target.email.value
         const password = e.target.password.value
 
-        console.log({name,image,email,password})
+        console.log({ name, image, email, password })
 
 
-        const {data , error} = await authClient.signUp.email({
-            name,email,password,image,
+        const { data, error } = await authClient.signUp.email({
+            name, email, password, image,
         })
 
-        console.log({data,error})
+
+        if (error) {
+            toast.error("Invalid email or password")
+        }
+        if (data) {
+            toast.success("Login successfull")
+            setTimeout(() => {
+                router.push("/");
+            }, 500);
+
+        }
     };
 
     return (
-        <div className="">  
+        <div className="">
 
             <Card className="border mx-auto w-125 py-10 mt-5  bg-linear-to-r from-red-200 to-sky-300">
 

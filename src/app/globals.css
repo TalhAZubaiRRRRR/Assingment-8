@@ -1,2 +1,5 @@
 @import "tailwindcss";
 @import "@heroui/styles"; 
+body {
+  background: linear-gradient(to right, #f3f4f6, #e5e7eb);
+}

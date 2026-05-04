@@ -1,5 +1,6 @@
-import { Chip } from '@heroui/react';
+import { Button, Chip } from '@heroui/react';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import { FaStar } from 'react-icons/fa';
 
@@ -7,7 +8,7 @@ const BestCousesCard = ({ datas, course }) => {
     return (
         <div
             key={course.id}
-            className="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col hover:shadow-xl transition-shadow"
+            className="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col hover:shadow-xl transition-shadow  bg-linear-to-r from-red-200 to-sky-300"
         >
             {/* Image */}
             <div className='relative'>
@@ -51,9 +52,11 @@ const BestCousesCard = ({ datas, course }) => {
                         <FaStar /> {course.rating}
                     </span>
 
-                    <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium">
+                    <Link href='/courses'>
+                        <Button  className=" hover:bg-blue-700 ">
                         Details
-                    </button>
+                    </Button>
+                    </Link>
                 </div>
             </div>
         </div>
