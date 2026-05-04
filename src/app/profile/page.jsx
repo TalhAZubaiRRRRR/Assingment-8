@@ -11,7 +11,7 @@ const profilePage = () => {
     console.log(user)
     console.log(userInfo)
     return (
-        <div className="max-w-96 mx-auto ">
+        <div className="max-w-96 mx-auto  mt-10 mb-10">
             
             <Card className=" flex flex-col items-center border bg-linear-to-r from-red-200 to-sky-300">
                 <Avatar >
