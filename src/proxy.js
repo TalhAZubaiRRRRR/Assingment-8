@@ -14,7 +14,7 @@ if(!session){
 }
 
 //   return NextResponse.redirect(new URL('/home', request.url))
-
+// console
 }
  
 export const config = {
