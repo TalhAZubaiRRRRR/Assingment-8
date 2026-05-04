@@ -15,9 +15,7 @@ const cardsDetails = async ({ params }) => {
     
     const course = datas.find(c => c.id == id);
 
-    const handleEnroll =() =>{
-        toast.success('Enrollment Successful')
-    }
+   
 
     
 
@@ -106,8 +104,8 @@ const cardsDetails = async ({ params }) => {
                         <div className="flex items-center gap-2 text-yellow-500 text-lg font-bold">
                             <FaStar /> {course.rating}
                         </div>
-
-                        <button onClick={handleEnroll} className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">
+                        {/* toast not working */}
+                        <button  className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">
                             Enroll Now
                         </button>
                     </div>
