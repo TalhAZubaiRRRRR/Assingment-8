@@ -12,7 +12,7 @@ const BestCourses = async () => {
     console.log(topCouses)
     return (
         <section className="py-12 px-4">
-            <h2 className="text-3xl font-bold text-center mb-10">
+            <h2 className="text-3xl font-bold text-center mb-10 animate-bounce">
                 Top 3 Best Courses
             </h2>
 

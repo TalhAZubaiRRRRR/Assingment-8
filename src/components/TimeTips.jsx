@@ -4,7 +4,7 @@ import { FaClock, FaBookOpen, FaBrain, FaTasks } from 'react-icons/fa';
 const TimeTips = () => {
     return (
         <section className="max-w-7xl mx-auto px-4 py-16 ">
-            <h2 className="text-4xl font-bold text-center text-black mb-4">
+            <h2 className="text-4xl font-bold text-center text-black mb-4 animate-bounce">
                 Study Success Guide
             </h2>
 

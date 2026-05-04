@@ -4,7 +4,7 @@ import React from 'react';
 const BestTeachers = () => {
     return (
         <section className="max-w-7xl mx-auto px-4 py-16">
-            <h2 className="text-4xl font-bold text-center mb-4 text-black ">
+            <h2 className="text-4xl font-bold text-center mb-4 text-black animate-bounce">
                 Our Best Mentors
             </h2>
 

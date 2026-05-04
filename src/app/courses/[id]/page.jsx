@@ -1,8 +1,10 @@
+'use client'
 import { Button, Chip } from '@heroui/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { FaArrowLeft, FaExclamationCircle, FaStar } from 'react-icons/fa';
+import { toast } from 'react-toastify';
 
 
 const cardsDetails = async ({ params }) => {
@@ -12,6 +14,10 @@ const cardsDetails = async ({ params }) => {
 
     
     const course = datas.find(c => c.id == id);
+
+    const handleEnroll =() =>{
+        toast.success('Enrollment Successful')
+    }
 
     
 
@@ -28,7 +34,7 @@ const cardsDetails = async ({ params }) => {
                 <h2 className="text-3xl font-bold text-gray-800 mb-2">
                     Course Not Found
                 </h2>
-                <p className="text-gray-500 max-w-md mb-8">
+                <p className="text-gray-500 max-w-md mb-8 animate-bounce">
                     Oops! The course you are looking for does not exist or has been moved.
                     Check the URL or explore our other top-rated courses.
                 </p>
@@ -101,7 +107,7 @@ const cardsDetails = async ({ params }) => {
                             <FaStar /> {course.rating}
                         </div>
 
-                        <button  className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">
+                        <button onClick={handleEnroll} className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">
                             Enroll Now
                         </button>
                     </div>

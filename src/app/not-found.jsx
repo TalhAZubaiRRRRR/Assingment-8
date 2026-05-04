@@ -4,9 +4,9 @@ import Link from "next/link";
 const NotFound = () => {
     return (
         <div className="min-h-screen flex flex-col items-center justify-center text-center px-4">
-            <h1 className="text-6xl font-bold text-red-500 mb-4">404</h1>
+            <h1 className="text-6xl font-bold text-red-500 mb-4 ">404</h1>
 
-            <h2 className="text-2xl font-semibold mb-2">
+            <h2 className="text-2xl font-semibold mb-2 animate-caret-blink ">
                 Page Not Found
             </h2>
 
@@ -15,7 +15,7 @@ const NotFound = () => {
             </p>
 
             <Link href="/">
-                <Button className="px-6 py-3 hover:bg-blue-700">
+                <Button className="px-6 py-3 hover:bg-blue-700 ">
                     Go Home
                 </Button>
             </Link>

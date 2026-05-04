@@ -13,45 +13,45 @@ import {
     TextField,
 } from "@heroui/react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function SignUpPage() {
-    const router = useRouter()
+    const router = useRouter();
 
     const onSubmit = async (e) => {
-
         e.preventDefault();
-        const name = e.target.name.value
-        const image = e.target.image.value
 
-        const email = e.target.email.value
-        const password = e.target.password.value
-
-        console.log({ name, image, email, password })
-
+        const name = e.target.name.value;
+        const image = e.target.image.value;
+        const email = e.target.email.value;
+        const password = e.target.password.value;
 
         const { data, error } = await authClient.signUp.email({
-            name, email, password, image,
-        })
-
+            name,
+            email,
+            password,
+            image,
+        });
 
         if (error) {
-            toast.error("Invalid email or password")
+            toast.error("Invalid email or password");
         }
+
         if (data) {
-            toast.success("Login successfull")
+            toast.success("Signup successful");
             setTimeout(() => {
                 router.push("/");
             }, 500);
-
         }
     };
 
     return (
-        <div className="">
+        <div className="mb-5 px-4">
 
-            <Card className="border mx-auto w-125 py-10 mt-5  bg-linear-to-r from-red-200 to-sky-300">
+            <Card className="border mx-auto w-full max-w-md sm:max-w-lg py-8 sm:py-10 mt-5 bg-linear-to-r from-red-200 to-sky-300">
 
                 <h1 className="text-center text-2xl font-bold">Sign Up</h1>
+
                 <div>
                     <Image
                         src="/loogo.png"
@@ -59,11 +59,13 @@ export default function SignUpPage() {
                         width={60}
                         height={60}
                         className="object-contain rounded-full mx-auto"
-
                     />
                 </div>
 
-                <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
+                <Form
+                    className="w-full px-4 sm:px-6 flex flex-col gap-4"
+                    onSubmit={onSubmit}
+                >
                     <TextField isRequired name="name" type="text">
                         <Label>Name</Label>
                         <Input placeholder="Enter your name" />
@@ -76,8 +78,6 @@ export default function SignUpPage() {
                         <FieldError />
                     </TextField>
 
-
-
                     <TextField
                         isRequired
                         name="email"
@@ -86,7 +86,6 @@ export default function SignUpPage() {
                             if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)) {
                                 return "Please enter a valid email address";
                             }
-
                             return null;
                         }}
                     >
@@ -101,16 +100,9 @@ export default function SignUpPage() {
                         name="password"
                         type="password"
                         validate={(value) => {
-                            if (value.length < 8) {
-                                return "Password must be at least 8 characters";
-                            }
-                            if (!/[A-Z]/.test(value)) {
-                                return "Password must contain at least one uppercase letter";
-                            }
-                            if (!/[0-9]/.test(value)) {
-                                return "Password must contain at least one number";
-                            }
-
+                            if (value.length < 8) return "Password must be at least 8 characters";
+                            if (!/[A-Z]/.test(value)) return "Must contain uppercase letter";
+                            if (!/[0-9]/.test(value)) return "Must contain a number";
                             return null;
                         }}
                     >
@@ -122,18 +114,18 @@ export default function SignUpPage() {
                         <FieldError />
                     </TextField>
 
-                    <div className="flex gap-2">
-                        <Button type="submit">
+                    <div className="flex flex-col sm:flex-row gap-2">
+                        <Button type="submit" className="w-full sm:w-auto">
                             <Check />
                             Submit
                         </Button>
-                        <Button type="reset" variant="secondary">
+
+                        <Button type="reset" variant="secondary" className="w-full sm:w-auto">
                             Reset
                         </Button>
                     </div>
                 </Form>
             </Card>
         </div>
-
     );
 }
